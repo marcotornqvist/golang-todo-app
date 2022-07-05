@@ -55,8 +55,16 @@ or
 migrate -database ${POSTGRESQL_URL} -path db/migrations up
 ```
 
-**Run command below to start the project:**
+### **Start the application**
+
+**Run command below to start the project without Docker:**
 
 ```
 go run main.go
+```
+
+**Run command below to start the project with Docker:**
+
+```
+docker-compose up
 ```
