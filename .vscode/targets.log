@@ -7,7 +7,7 @@ make all --print-data-base --no-builtin-variables --no-builtin-rules --question
 
 # This program built for i386-apple-darwin11.3.0
 
-# Make data base, printed on Wed Jun 29 10:04:43 2022
+# Make data base, printed on Tue Jul  5 17:21:42 2022
 
 # Variables
 
@@ -44,7 +44,7 @@ __CFBundleIdentifier = com.microsoft.VSCode
 # environment
 INFOPATH = /opt/homebrew/share/info:
 # environment
-VSCODE_IPC_HOOK_EXTHOST = /var/folders/yb/2gk32cb147g2p7z5tt1gbw380000gn/T/vscode-ipc-6eb4c1c1-d277-4c4a-b666-66f2d3d26f8a.sock
+VSCODE_IPC_HOOK_EXTHOST = /var/folders/yb/2gk32cb147g2p7z5tt1gbw380000gn/T/vscode-ipc-d7ad1322-67cf-451e-b09f-f2be58e84c75.sock
 # environment
 VSCODE_CWD = /
 # environment
@@ -130,6 +130,9 @@ HOMEBREW_PREFIX = /opt/homebrew
 # automatic
 +F = $(notdir $+)
 # environment
+ 
+make: *** No rule to make target `all'.  Stop.
+
 HOMEBREW_REPOSITORY = /opt/homebrew
 # environment
 __CF_USER_TEXT_ENCODING = 0x1F5:0x0:0x0
@@ -152,9 +155,9 @@ MAKELEVEL := 0
 # environment
 LANG = C
 # environment
-VSCODE_PID = 44121
+VSCODE_PID = 88232
 # variable set hash-table stats:
-# Load=71/1024=7%, Rehash=0, Collisions=2/86=2%
+# Load=71/1024=7%, Rehash=0, Collisions=2/95=2%
 
 # Pattern-specific Variable Values
 
@@ -162,9 +165,9 @@ VSCODE_PID = 44121
 
 # Directories
 
-# . (device 16777234, inode 4807872): 17 files, no impossibilities.
+# . (device 16777234, inode 4807872): 19 files, no impossibilities.
 
-# 17 files, no impossibilities in 1 directories.
+# 19 files, no impossibilities in 1 directories.
 
 # Implicit Rules
 
@@ -175,9 +178,11 @@ VSCODE_PID = 44121
 # Not a target:
 all:
 #  Command-line target.
-#  Implicit rule search has not been done.
-#  Modification time never checked.
+#  Implicit rule search has been done.
+#  File does not exist.
 #  File has not been updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .SUFFIXES:
@@ -187,9 +192,12 @@ all:
 
 # Not a target:
 Makefile:
-#  Implicit rule search has not been done.
-#  Modification time never checked.
-#  File has not been updated.
+#  Implicit rule search has been done.
+#  Last modified 2022-07-05 16:32:18
+#  File has been updated.
+#  Successfully updated.
+# variable set hash-table stats:
+# Load=0/32=0%, Rehash=0, Collisions=0/0=0%
 
 # Not a target:
 .DEFAULT:
@@ -201,9 +209,20 @@ migrateup:
 #  Implicit rule search has not been done.
 #  Modification time never checked.
 #  File has not been updated.
+#  commands to execute (from `Makefile', line 2):
+	migrate -database ${POSTGRESQL_URL} -path db/migrations up
+	
+
+migratedown:
+#  Implicit rule search has not been done.
+#  Modification time never checked.
+#  File has not been updated.
+#  commands to execute (from `Makefile', line 5):
+	migrate -database ${POSTGRESQL_URL} -path db/migrations down
+	
 
 # files hash-table stats:
-# Load=5/1024=0%, Rehash=0, Collisions=0/6=0%
+# Load=6/1024=1%, Rehash=0, Collisions=0/18=0%
 # VPATH Search Paths
 
 # No `vpath' search paths.
@@ -215,8 +234,6 @@ migrateup:
 # strcache size: total = 4096 / max = 4096 / min = 4096 / avg = 4096
 # strcache free: total = 4087 / max = 4087 / min = 4087 / avg = 4087
 
-# Finished Make data base on Wed Jun 29 10:04:43 2022
+# Finished Make data base on Tue Jul  5 17:21:42 2022
 
  
-Makefile:2: *** missing separator.  Stop.
-

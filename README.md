@@ -21,7 +21,7 @@ Environment Variables - Create a .env file and copy & paste the values below and
 POSTGRES_USER=$PG_USER
 POSTGRES_PASSWORD=$PG_PASSWORD
 POSTGRES_DB=$PG_DB
-POSTGRES_URL=localhost # (or "host.docker.internal" if running on with docker-compose up)
+POSTGRES_URL=localhost
 POSTGRES_PORT=5432
 ```
 
@@ -59,6 +59,14 @@ Run command below to start the project without Docker:
 
 ```
 go run main.go
+```
+
+### **Docker**
+
+Remember to set POSTGRES_URL value in .env file to "host.docker.internal" if running application with Docker.
+
+```
+POSTGRES_URL=host.docker.internal
 ```
 
 Run command below to start the project with Docker:
