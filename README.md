@@ -9,13 +9,13 @@ Testing CRUD functionality with Golang, PostgreSQL and Chi router.
 
 ### **Usage**
 
-Clone the repository:
+Run the command below to clone the repository:
 
 ```
 git clone https://github.com/marcotornqvist/golang-todo-app.git
 ```
 
-Environment Variables - Create a .env file and change the DB connection values $PG_USER, $PG_PASSWORD and $PG_DB to your own database connection values below:
+Environment Variables - Create a .env file and copy & paste the values below and change $PG_USER, $PG_PASSWORD and $PG_DB values to your own database connection values below:
 
 ```
 POSTGRES_USER=$PG_USER
@@ -35,7 +35,7 @@ Run command below to create new migration files (Remember to change "migration_n
 migrate create -ext sql -dir db/migrations -seq migration_name
 ```
 
-Run command below to export PostgreSQL database URL (Remember to change the DB connection values $PG_USER, $PG_PASSWORD and $PG_DB to your own database connection values below):
+Run command below to export PostgreSQL database URL so that it can be accessed by Makefile for instance (Remember to change the DB connection values $PG_USER, $PG_PASSWORD and $PG_DB to your own database connection values below):
 
 ```
 export POSTGRESQL_URL="postgres://$PG_USER:$PG_PASSWORD@localhost:5432/$PG_DB?sslmode=disable"
