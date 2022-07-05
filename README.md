@@ -29,21 +29,19 @@ POSTGRES_PORT=5432
 
 Remember to migrate the database to the latest version using the instructions below. Follow the instructions below also when making changes to the database in the future. Read more on how to use golang-migrate [here](https://github.com/golang-migrate/migrate).
 
-**Creates two new migration files in folder db/migrations:**
-
 Run command below to create new migration files (Remember to change "migration_name" below to something more fitting):
 
 ```
 migrate create -ext sql -dir db/migrations -seq migration_name
 ```
 
-**Run command below to export PostgreSQL database URL (Remember to change the DB connection values $PG_USER, $PG_PASSWORD and $PG_DB to your own database connection values below):**
+Run command below to export PostgreSQL database URL (Remember to change the DB connection values $PG_USER, $PG_PASSWORD and $PG_DB to your own database connection values below):
 
 ```
 export POSTGRESQL_URL="postgres://$PG_USER:$PG_PASSWORD@localhost:5432/$PG_DB?sslmode=disable"
 ```
 
-**Run command below to migrate database to latest version:**
+Run command below to migrate database to latest version:
 
 ```
 make migrateup
@@ -57,13 +55,13 @@ migrate -database ${POSTGRESQL_URL} -path db/migrations up
 
 ### **Start the application**
 
-**Run command below to start the project without Docker:**
+Run command below to start the project without Docker:
 
 ```
 go run main.go
 ```
 
-**Run command below to start the project with Docker:**
+Run command below to start the project with Docker:
 
 ```
 docker-compose up
