@@ -1,0 +1,5 @@
+make: Entering directory `/Users/marcotornqvist/Projects/Personal/2022/June/go-todo-app'
+make: Leaving directory `/Users/marcotornqvist/Projects/Personal/2022/June/go-todo-app'
+ 
+Makefile:2: *** missing separator.  Stop.
+

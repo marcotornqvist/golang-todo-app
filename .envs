@@ -1,0 +1,5 @@
+POSTGRES_USER=$PG_USER
+POSTGRES_PASSWORD=$PG_PASSWORD
+POSTGRES_DB=$PG_DB
+POSTGRES_URL=localhost # (or "host.docker.internal" if running on with docker-compose up)
+POSTGRES_PORT=5432
